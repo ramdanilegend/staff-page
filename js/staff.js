@@ -25,9 +25,13 @@ $(document).ready(function(){
           document.getElementById("container-bio").classList.add("d-none");
           document.getElementById("container-leave").innerHTML = `${staff[0].name} has left the organization since ${staff[0].leaveDate}.`;
           document.getElementById("profile-container").classList.add("profile-img-leave");
-          $('meta[property=og\\:description]').attr('content', `${staff[0].name} has left the organization since ${staff[0].leaveDate}.`);
+        $('head').append( '<meta property="og:description" content="' +  `${staff[0].name} has left the organization since ${staff[0].leaveDate}.` + '">' );
+
+          // $('meta[property=og\\:description]').attr('content', `${staff[0].name} has left the organization since ${staff[0].leaveDate}.`);
         } else{
-          $('meta[property=og\\:description]').attr('content', staff[0].biography);
+        $('head').append( '<meta property="og:description" content="' +  `${staff[0].biography}` + '">' );
+
+          // $('meta[property=og\\:description]').attr('content', staff[0].biography);
           document.getElementById("container-leave").classList.add("d-none");
           document.getElementById("biography").innerHTML = staff[0].biography;
           document.getElementById("join").innerHTML = staff[0].joinDate;
