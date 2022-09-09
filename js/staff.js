@@ -15,10 +15,11 @@ $(document).ready(function(){
         document.getElementById("linkedin").href=staff[0].linkedin;
         document.getElementById("profile").src = `assets/staffs/${staff[0].profile}`;
         document.title = `${staff[0].name}, IC.SG - Staff`;
-        $('meta[property=og\\:image]').attr('content', `https://www.ic.sg/assets/staffs/${staff[0].profile}`);
-        let imageTypeIndex = staff[0].profile.lastIndexOf('.')
-        const typeImage = staff[0].profile.slice(imageTypeIndex + 1)
-        $('meta[property=og\\:image\\:type]').attr('content', `image/${typeImage}`);
+        $('head').append( '<meta property="og:image" content="' +  `${staff[0].profile}` + '">' );
+        // $('meta[property=og\\:image]').attr('content', `https://www.ic.sg/assets/staffs/${staff[0].profile}`);
+        // let imageTypeIndex = staff[0].profile.lastIndexOf('.')
+        // const typeImage = staff[0].profile.slice(imageTypeIndex + 1)
+        // $('meta[property=og\\:image\\:type]').attr('content', `image/${typeImage}`);
 
         if(staff[0].leaveDate){
           document.getElementById("container-bio").classList.add("d-none");
