@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'Hind Madurai';
+    src: url('../fonts/HindMadurai-SemiBold.ttf'); /* IE9 Compat Modes */
+    src: url('../fonts/HindMadurai-Regular.ttf')  format('truetype'),
+         url('../fonts/HindMadurai-Light.ttf')  format('truetype'),
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+body{
+    background-color: #F9F8F8;
+}
+
+.header{
+    margin-bottom: 2px;
+}
+
+.bg {
+    position: relative;
+    background-image: url(../assets/pattern-staff.png);
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.title-container{
+    margin: 0 15px 0 0;
+    z-index: 1000;
+}
+
+.title-box{
+    background-color: #CC2A40;
+    width: 80%;
+    
+}
+.ccc{
+    width: 80%;
+}
+.title-box-triangle{
+    position: relative;
+    left: 0.5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 55px 55px 0;
+    border-color: transparent #CC2A40 transparent transparent;
+    
+}
+
+main{
+    height: calc(100vh - 55px);
+    /* z-index: -1; */
+    width: 100%;
+}
+
+.main-container{
+    padding-top: 150px;
+}
+
+.content-container{
+    background-color: #ffffff;
+    min-width: 80%;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.profile-container{
+    margin-left:auto;
+    margin-right:auto;
+    position:relative; /* and this has to be relative */
+    /* width: ; */
+    width: 200px;
+    height: 100px;
+
+    
+}
+.profile-item{
+    position:absolute;
+    top: -100px;
+}
+.profile-img{
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* .profile-img-container{
+ position:relative;
+} */
+.profile-img-leave{
+    border-radius: 50%;
+
+    background: #424242;
+ z-index:85;
+ position:absolute;
+ top:0px;
+ left:0px;
+ width:100%;
+ height:100%;
+ opacity:0.9;
+}
+
+.name{
+    font-weight: 500;
+    font-size: 20pt;
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+.position-staff{
+    font-weight: 500;
+    font-size: 11pt;
+    color: #717171;
+    margin-bottom: 5px;
+}
+
+.divider{
+    margin-bottom: 5px;
+}
+
+.divider-item{
+    width: 7.2px;
+    height: 4.5px;
+    background-color: #757575;
+    border-radius: 7px;
+}
+
+.divider-item-p{
+    margin-right: 4px;
+}
+
+.contact{
+    margin: 10px 0 10px 0;
+}
+
+.container-bio{
+    width: 403.2px;
+    margin-bottom: 40px;
+}
+
+.bio-title{
+    font-weight: 500;
+    font-size: 14pt;
+    margin-top: 4px;
+}
+
+.bio-content{
+    font-weight: 300;
+    font-size: 10pt;
+}
+.biography{
+    text-align: justify;
+}
+
+.skill-tag-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.skill-tag-item{
+    width: 125px;
+    height: 30px;
+    background-color: #757575;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .divider-item-p:nth-child(-n+12){
+        display: none !important;
+    }
+    .container-bio{
+        width: 260px;
+    }
+    .name{
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .divider-item-p:nth-child(-n+18){
+        display: none !important;
+    }
+    .container-bio{
+        width: 201.6px;
+    }
+    .name{
+        width: 201.6px;
+    }
+    .position-staff{
+        width: 201.6px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .title-box{
+        width: 93%;
+    }
+    .content-container{
+        min-width: 93%;
+    }      
+}
